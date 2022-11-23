@@ -42,7 +42,7 @@ Learn Science mobile platform for cross discipline education content. Study math
 - Support Q/As, Exams, Practice Tests and trivia
 - Support video lectures
 
-## Libraries users
+## Libraries used
 - j2html
 
 ## Data Definition
