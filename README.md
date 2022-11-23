@@ -45,6 +45,15 @@ Learn Science mobile platform for cross discipline education content. Study math
 ## Libraries users
 - j2html
 
+## Data Definition
+
+| Model   | Fields                                                       | Description                                            |
+|---------|--------------------------------------------------------------|--------------------------------------------------------|
+| Subject | **ID**,**Name**                                              | Defines a subject such as physics, bilogy or chemistry |
+| Topic   | **ID**,**Name**,**Subject**                                  | The topic under a particular subject                   |
+| Section | **ID, Topic, Name, Paragraph1, Paragraph2,gif/image url, index** | The section under this topic                           |
+
+
 ## Copyright and License
 The code and the platform is available under Apache 2.0 license.
  
