@@ -35,18 +35,18 @@ public class SubjectControllerTest {
                 .andReturn();
     }
 
-    @Test
-    public void shouldCreateSubjectWithPayloadTest() throws Exception {
-        var subject = new Subject(1L, "Physics");
-        var payload = new ObjectMapper().writeValueAsString(subject);
-
-        this.mockMvc.perform(post("/subject/")
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content(payload))
-                .andDo(print())
-                .andExpect(status().isOk())
-                .andReturn();
-    }
+//    @Test
+//    public void shouldCreateSubjectWithPayloadTest() throws Exception {
+//        var subject = new Subject(1L, "Physics");
+//        var payload = new ObjectMapper().writeValueAsString(subject);
+//
+//        this.mockMvc.perform(post("/subject/")
+//                        .contentType(MediaType.APPLICATION_JSON)
+//                        .content(payload))
+//                .andDo(print())
+//                .andExpect(status().isOk())
+//                .andReturn();
+//    }
 
 //    @Test
 //    public void shouldFetchAllSubjectsEndPointTest() throws Exception {
