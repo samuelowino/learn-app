@@ -1,6 +1,6 @@
 package com.owino.learn.services;
 
-import com.owino.learn.entities.Subject;
+import com.owino.learn.api.resource.SubjectResource;
 import java.util.List;
 import org.springframework.stereotype.Service;
 
@@ -9,14 +9,14 @@ public interface SubjectService {
     /**
      * Create a new subject
      *
-     * @param subject Subject
+     * @param resource SubjectResource
      */
-    void create(Subject subject);
+    void create(SubjectResource resource);
 
     /**
      * Fetch all created subjects
      *
      * @return List of Subjects
      */
-    List<Subject> findAll();
+    List<SubjectResource> findAll();
 }
