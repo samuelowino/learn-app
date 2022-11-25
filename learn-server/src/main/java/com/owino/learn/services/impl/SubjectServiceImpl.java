@@ -5,8 +5,9 @@ import com.owino.learn.api.resource.SubjectResource;
 import com.owino.learn.repository.SubjectRepository;
 import com.owino.learn.services.SubjectService;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import javax.swing.text.html.Option;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -37,5 +38,22 @@ public class SubjectServiceImpl implements SubjectService {
         return subjects.stream()
                 .map(ResourceConverter::toResource)
                 .collect(Collectors.toList());
+    }
+
+    /**
+     * Find subject by it\'s id
+     *
+     * @param id Database id for this subject
+     * @return Optional Subject Resource
+     */
+    @Override
+    public Optional<SubjectResource> findBySubjectId(long id) {
+        var optionalSubject = repository.findById(id);
+        if (optionalSubject.isEmpty()) return Optional.empty();
+        else {
+            var subject = optionalSubject.get();
+            var subjectResource = ResourceConverter.toResource(subject);
+            return Optional.of(subjectResource);
+        }
     }
 }

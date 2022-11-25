@@ -24,4 +24,16 @@ public class SubjectRepositoryTest {
         Assertions.assertThat(entity.getId()).isEqualTo(1L);
         Assertions.assertThat(entity.getName()).isEqualTo("Physics");
     }
+
+    @Test
+    public void shouldFindSubjectByIdTest(){
+        repository.save( new Subject(1L,"Physics"));
+        var result = repository.findById(1L);
+
+        Assertions.assertThat(result).isNotNull();
+        Assertions.assertThat(result.isPresent()).isTrue();
+        Assertions.assertThat(result.get()).isNotNull();
+        Assertions.assertThat(result.get().getId()).isEqualTo(1L);
+        Assertions.assertThat(result.get().getName()).isEqualTo("Physics");
+    }
 }
