@@ -47,11 +47,13 @@ Learn mobile platform for cross discipline education content. Study math, physic
 
 ## Data Definition
 
-| Model   | Fields                                                       | Description                                            |
-|---------|--------------------------------------------------------------|--------------------------------------------------------|
-| Subject | **ID**,**Name**                                              | Defines a subject such as physics, bilogy or chemistry |
-| Topic   | **ID**,**Name**,**Subject**                                  | The topic under a particular subject                   |
-| Section | **ID, Topic, Name, Paragraph1, Paragraph2,gif/image url, index** | The section under this topic                           |
+| Model     | Fields                                                 | Description                                            |
+|-----------|--------------------------------------------------------|--------------------------------------------------------|
+| Subject   | **ID**,**Name**                                        | Defines a subject such as physics, bilogy or chemistry |
+| Topic     | **ID**,**Name**,**Subject**                            | The topic under a particular subject                   |
+| Section   | **ID, Topic, Name, [paragraphs],coverImageUrl, index** | The section under this topic                           |
+| Paragraph | **ID, content, coverImageUrl, index**                  | The parapgraph under a section                         |
+
 
 
 ## Copyright and License
