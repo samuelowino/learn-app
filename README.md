@@ -1,5 +1,5 @@
-# Learn Science
-Learn Science mobile platform for cross discipline education content. Study math, physics, biology, chemistry and other science disciplines in one app.
+# Learn
+Learn mobile platform for cross discipline education content. Study math, physics, biology, chemistry and other disciplines in one app.
 
 # Features
 - Text based education content, curated by subject, topic and chapter
