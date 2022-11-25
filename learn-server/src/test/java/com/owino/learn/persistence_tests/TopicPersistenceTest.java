@@ -2,7 +2,6 @@ package com.owino.learn.persistence_tests;
 
 import com.owino.learn.entities.Subject;
 import com.owino.learn.entities.Topic;
-import javax.transaction.Transactional;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -19,7 +18,6 @@ public class TopicPersistenceTest {
     private TestEntityManager testEntityManager;
 
     @Test
-    @Transactional
     public void shouldPersistTopicTest(){
         var entity = this.testEntityManager.persistAndFlush( new Topic(1L,"Introduction", new Subject(1L, "Physics")));
         Assertions.assertThat(entity).isNotNull();
